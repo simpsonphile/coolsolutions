@@ -1,0 +1,52 @@
+h1.heading {
+  font-size: 4rem;
+}
+
+h2.heading {
+  font-size: 3.5rem;
+}
+
+h3.heading {
+  font-size: 2.75rem;
+}
+
+h4.heading {
+  font-size: 1.6rem;
+}
+
+.heading {
+  line-height: 1.5;
+  letter-spacing: 2px;
+
+  &-white {
+    color: $color5;
+  }
+
+  &-blue {
+    color: $color1;
+  }
+
+  &-blue-dark{
+    color: $color2;
+  }
+
+  &-gradient {
+
+    font-size: 72px;
+    background: -webkit-linear-gradient(0deg,$color1, $color2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &-black {
+    color: $color4;
+  }
+
+
+
+  &-sans {
+    font-family: 'Roboto Slab', sans;
+    font-weight: 300;
+  }
+
+  }

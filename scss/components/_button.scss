@@ -1,0 +1,50 @@
+.button {
+  line-height: 1;
+  position: relative;
+  display: inline-block;
+  padding: 2rem 3rem;
+  text-decoration: none;
+  border-radius: 1000px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  box-shadow: 2px 1px 1px lighten($color4, 15);//fallback
+  box-shadow: 2px 1px 1px rgba($color4,0.5);
+  transition: all .3s;
+
+
+
+  &:hover,
+  &:active {
+    box-shadow: 0px 0px 0px lighten($color4, 15);//fallback
+    box-shadow: 0px 0px 0px rgba($color4,0.5);
+    transform: translateY(1px);
+  }
+
+
+  &-white {
+    background: $color5;
+    color: $color4;
+  }
+
+  &-standard {
+    background: $color2;//fallback
+    background-image: linear-gradient(180deg, $color1, $color2);
+    color: $color5;
+  }
+
+  &-transparent-light {
+    background-color: transparent;
+    color: $color5;
+    border: 1px solid lighten($color4, 25);
+    border: 1px solid rgba($color4, 0.2);
+  }
+
+  &-transparent-dark {
+    background-color: transparent;
+    color: $color2;
+    border: 1px solid lighten($color4, 25);
+    border: 1px solid rgba($color4, 0.2);
+  }
+}

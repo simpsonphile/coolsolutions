@@ -1,0 +1,12 @@
+.logo {
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
+  cursor: default;
+  color: $color5;
+
+  h1 > span {
+    color: rgba($color5, 0.5);
+  }
+
+}

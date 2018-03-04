@@ -1,0 +1,27 @@
+.skills {
+  position: relative;
+margin-top: 12rem;
+
+
+.skill-icon {
+  color: $color1;
+  font-size: 3rem;
+}
+
+h3.heading {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.row > * {
+  @include respond(tab-port){
+    text-align: center;
+  }
+}
+
+p {
+  line-height: 1.5;
+  color: lighten($color4, 10);//fallback
+  color: rgba($color4, 0.7);
+}
+}

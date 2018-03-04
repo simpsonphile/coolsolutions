@@ -1,0 +1,36 @@
+html {
+  font-size: 62.5%;
+
+  @include respond(tab-land){
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port){
+    font-size: 50%;
+  }
+
+  @include respond(big-desktop){
+    font-size: 75%;
+  }
+
+}
+
+body {
+  font-size: 1.6rem;
+  background: $color5;
+  font-family: 'Roboto', sans-serif;
+  //font-family: 'Roboto Slab', serif;
+  overflow-x: hidden;
+}
+
+input, textarea {
+  font-family: 'Roboto', sans-serif;
+}
+
+.website {
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}

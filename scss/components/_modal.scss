@@ -1,0 +1,39 @@
+.modal {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000000;
+  background: none;//fallback
+  background: rgba($color4, 0);
+  transition: all .3s;
+
+  span {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    line-height: 1;
+    color: $color5;
+    font-size: 2rem;
+  }
+
+  img {
+    transform: translate(-50%, -50%) scale(0);
+    transition: all .4s .3s;
+    border: 2px solid $color5;
+    max-width: 90%;
+
+  }
+}
+
+#modal:target {
+  visibility: visible;
+  background: lighten($color4,5);//fallback
+  background: rgba($color4, 0.85);
+
+  img {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

@@ -1,0 +1,124 @@
+$height: 400px;
+$height-tab-port: 300px;
+
+.shape {
+  margin: 10rem 0;
+  position: relative;
+  width: 75%;
+  background: $color1;//fallback
+  background-image: linear-gradient(180deg, $color1, $color2);
+  color: $color5;
+  padding: 4rem;
+  z-index: 1;
+  min-height: $height;
+
+  @include respond(tab-port){
+    min-height: $height-tab-port;
+  }
+
+  @include respond(phone){
+    width: 100%;
+    min-height: auto;
+  }
+
+  &::after {
+    content: "";
+    height: 0;
+    clear: both;
+    display: block;
+  }
+
+&::before {
+  content: "";
+  height: 100%;
+  width: $height;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: calc(-#{$height} / 2);
+  background: $color1;//fallback
+  background-image: linear-gradient(180deg, $color1, $color2);
+  z-index: -1;
+
+  @include respond(tab-port){
+    width: $height-tab-port;
+    right: calc(-#{$height-tab-port} / 2);
+  }
+
+  @include respond(phone){
+    width: 0;
+    content: none;
+  }
+}
+
+img {
+  width: $height;
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  right: calc(-#{$height} / 2);
+  border-radius: 50%;
+
+  @include respond(tab-port){
+    width: $height-tab-port;
+    right: calc(-#{$height-tab-port} / 2);
+  }
+
+  @include respond(phone){
+    display: none;
+  }
+}
+
+.text {
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+
+  @include respond(phone){
+    position: static;
+    display: block;
+    transform: none;
+    width: 100%;
+  }
+
+  p.quote {
+    color: darken($color5, 20);
+    font-style: italic;
+    font-size: 2rem;
+    padding-left: 2rem;
+
+    @include respond(tab-port) {
+      font-size: 1.5rem;
+    }
+
+    &::before {
+      content: "''";
+    }
+
+    &::after {
+      content: "''";
+    }
+  }
+
+  p.name {
+    margin-top: 2rem;
+    color: $color5;
+    float: right;
+
+    @include respond(tab-port) {
+      font-size: 1.2rem;
+    }
+
+  }
+
+  padding-right: calc(#{$height / 2});
+  @include respond(tab-port){
+    padding-right: calc(#{$height-tab-port / 2});
+  }
+
+  @include respond(phone){
+    padding-right: 0;
+  }
+}
+
+}

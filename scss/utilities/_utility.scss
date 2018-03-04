@@ -1,0 +1,48 @@
+.center-middle {
+  display: block;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.f-left {
+  float: left !important;
+}
+
+.f-right {
+  float: right !important;
+}
+
+.dis-block {
+  display: block !important;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.expand-horizontaly {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.margin-bottom-small {
+  margin-bottom: 1rem;
+}
+
+.margin-bottom-medium {
+  margin-bottom: 2rem;
+}
+
+.margin-bottom-big {
+  margin-bottom: 3rem;
+}
+
+.margin-right-small {
+  margin-right: 1rem;
+}
+
+.capitalize {
+  font-style: italic;
+}

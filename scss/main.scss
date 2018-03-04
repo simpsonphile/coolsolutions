@@ -1,0 +1,26 @@
+@import "abstracts/variables";
+@import "abstracts/media-queries";
+
+
+@import "utilities/utility";
+
+
+@import "general/reset";
+@import "general/general";
+
+@import "components/grid";
+@import "components/button";
+@import "components/logo";
+@import "components/heading";
+@import "components/project-card";
+@import "components/photo";
+@import "components/menu";
+@import "components/modal";
+@import "components/shape";
+
+@import "layout/main-header";
+@import "layout/skills";
+@import "layout/projects";
+@import "layout/team";
+@import "layout/contact";
+@import "layout/footer";

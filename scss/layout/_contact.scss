@@ -1,0 +1,78 @@
+.contact {
+  position: relative;
+  margin-top: 12rem;
+
+  .background {
+    transform: translateX(-50%);
+    width: 200%;
+    overflow: hidden;
+    height: 100%;
+    background: lighten($color1, 42);
+    position: absolute;
+    top:0 ;
+    left: 50%;
+    border-radius: 50%;
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    padding: 8rem 4rem;
+    text-align: center;
+
+    .heading {
+      margin-top: 5rem;
+    }
+
+    p {
+      width: 75%;
+      max-width: 600px;
+      text-align: center;
+      margin: 0 auto;
+      line-height: 1.5;
+      color: lighten($color4, 15);//fallback
+      color: rgba($color4, 0.5);
+    }
+
+    .contact-form {
+      display: block;
+      width: 75%;
+      max-width: 600px;
+      margin: 0 auto;
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      textarea {
+        border: 0px;
+        padding: .5rem 1rem;
+        border-bottom: 1px solid $color4;
+        background: transparent;
+        display: block;
+        width: 100%;
+        outline: none;
+        margin: 3rem auto;
+        transition: all .3s;
+        font-size: 1.8rem;
+
+        &:focus {
+          border-color: $color1;
+        }
+      }
+
+      textarea {
+        resize: horizontal;
+      }
+
+      input[type="submit"] {
+        display: block;
+        margin: 2.5rem auto;
+        outline-style: none;
+        border: none;
+        cursor: pointer;
+      }
+    }
+
+
+  }
+}

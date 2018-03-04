@@ -1,0 +1,36 @@
+.photo {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 2px 1px 1px lighten($color4, 15);//fallback
+  box-shadow: 2px 1px 1px rgba($color4, 0.5);
+  margin: 0 auto;
+  border-radius: 5px;
+
+
+  @include respond(tab-port){
+    max-width: 400px;
+  }
+
+  @include respond(phone){
+    max-width: 300px;
+  }
+
+  &:hover {
+    & > img {
+      transform: scale(1.1);
+      -webkit-filter: brightness(0.4);
+      filter: brightness(0.4);
+    }
+  }
+
+  img {
+    display: block;
+    position: relative;
+    width: 100%;
+    transition: all .8s;
+    -webkit-filter: brightness(1);
+    filter: brightness(1);
+  }
+}
