@@ -1,29 +1,29 @@
 ////////////////////////////
 //modal
 
-var photos = document.getElementsByClassName('selectable');
-var img = document.getElementById('modal-image');
-var modal = document.getElementById('modal');
+const photos = document.querySelectorAll('img.selectable');
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modal-image');
 
-
-for (var i = 0; i < photos.length; i++) {
+const photosLength = photos.length;
+for (let i = 0; i < photosLength; i++) {
   photos[i].addEventListener('click', function(e){
-
-    img.src = this.src;
-    window.location.assign('#modal');
+    modalImg.src = this.src;
+    modal.classList.add('active');
   });
 
   modal.addEventListener('click', function(e){
-    window.location.assign('#exit-modal');
+    if(e.path[0].id !== 'modal-image')
+    modal.classList.remove('active');
   });
 }
 
 /////////////////////////////
 //menu-close
 
-var menuElements = document.getElementById('main-menu').getElementsByTagName('li');
-var checkbox = document.querySelector('#show');
-for (var i = 0; i < menuElements.length; i++) {
+const menuElements = document.getElementById('main-menu').getElementsByTagName('li');
+const checkbox = document.querySelector('#show');
+for (let i = 0; i < menuElements.length; i++) {
   menuElements[i].addEventListener('click', function(){
     checkbox.checked = false;
   });

@@ -10,13 +10,25 @@
   background: rgba($color4, 0);
   transition: all .3s;
 
-  span {
+  &.active {
+    visibility: visible;
+    background: lighten($color4,5);//fallback
+    background: rgba($color4, 0.85);
+
+    img {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  .close {
+    cursor: pointer;
     position: absolute;
-    top: 2rem;
-    right: 2rem;
+    top: 8rem;
+    right: 8rem;
     line-height: 1;
     color: $color5;
-    font-size: 2rem;
+    font-size: 4rem;
+    z-index: 2;
   }
 
   img {
@@ -24,16 +36,5 @@
     transition: all .4s .3s;
     border: 2px solid $color5;
     max-width: 90%;
-
-  }
-}
-
-#modal:target {
-  visibility: visible;
-  background: lighten($color4,5);//fallback
-  background: rgba($color4, 0.85);
-
-  img {
-    transform: translate(-50%, -50%) scale(1);
   }
 }
